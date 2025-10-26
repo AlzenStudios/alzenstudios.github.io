@@ -1,0 +1,11 @@
+# Allow Googlebot
+User-agent: Googlebot
+Disallow:
+
+# Allow OpenAI's ChatGPT crawler
+User-agent: ChatGPT
+Disallow:
+
+# Block all other bots
+User-agent: *
+Disallow: /
