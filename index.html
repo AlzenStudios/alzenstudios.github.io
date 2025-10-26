@@ -7,8 +7,8 @@
 </head>
 <body>
     <script type="module">
-    import { Menubar } from './components/menubar.js';
-        
+    import { Menubar } from 'components/menubar.js';
+
     const menuItems = [
       { label: "Home", icon: "fa-solid fa-house", onclick: () => alert("Home clicked") },
       { label: "About", icon: "fa-solid fa-info-circle", onclick: () => alert("About clicked") },
@@ -21,14 +21,14 @@
       },
       { label: "Contact", icon: "fa-solid fa-envelope", onclick: () => alert("Contact clicked") }
     ];
-  
+
     const style = {
       bar: { background: "#20232a", height: "50px" },
       button: { color: "#61dafb", fontSize: "16px" },
       hoverColor: "#21a1f1",
       submenu: { background: "#242424", hoverBackground: "#333" }
     };
-    
+
     Menubar.create(menuItems, style);
     </script>
 </body>
