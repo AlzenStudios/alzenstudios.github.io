@@ -7,7 +7,7 @@
 **1. Via NuGet / Package Manager (C#):**
 
 ```bash
-Install-Package EngineSDK
+Install-Package alzenstudios.enginesdk
 ```
 
 **2. Manual Installation:**
