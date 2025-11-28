@@ -29,5 +29,3 @@ using EngineSDK;
 ---
 
 This is **short and self-contained**, perfect for a “Getting Started” page focused only on installation.
-
-If you want, I can also **add a tiny tip section** for users who might run into common installation issues—makes it feel more helpful. Do you want me to do that?
