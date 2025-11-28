@@ -14,7 +14,7 @@ Install-Package EngineSDK
 
 * Download the latest EngineSDK package from the repository.
 * Unzip it into your project folder.
-* Add a reference to `EngineSDK.dll` in your project.
+* reference your module of desier into your project, but you also need to reference the obbligatory ones
 
 **3. Verify Installation:**
 
