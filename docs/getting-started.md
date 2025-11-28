@@ -27,5 +27,3 @@ using EngineSDK;
 * If there are no errors, the SDK is ready to use.
 
 ---
-
-This is **short and self-contained**, perfect for a “Getting Started” page focused only on installation.
