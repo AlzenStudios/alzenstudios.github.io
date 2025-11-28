@@ -7,7 +7,7 @@
 **1. Via NuGet / Package Manager (C#):**
 
 ```bash
-Install-Package alzenstudios.enginesdk
+Install-Package AlzenStudios.EngineSDK
 ```
 
 **2. Manual Installation:**
@@ -21,7 +21,7 @@ Install-Package alzenstudios.enginesdk
 * Open your project and try adding:
 
 ```csharp
-using EngineSDK;
+// include the module namespaces from documentation
 ```
 
 * If there are no errors, the SDK is ready to use.
