@@ -1,68 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="scripts/visited.js"></script>
-    <title>Alzenstudios : (Home) Real Creavitiy</title>
+    <title>Alzenstudios | Francesco Zecchini</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        app: {
+                            bg: '#020617', 
+                            card: '#0f172a',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8',
+                            border: '#1e293b',
+                            accent: '#818cf8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #818cf8; }
+        body { background-color: #020617; color: #f1f5f9; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+    </style>
 </head>
-<body>
-    <h1>Hello everyone, a welcoming start to Creativity</h1> <br>
-    <hr>
-    <h3>Who am I?</h3>
-    <p>Hello, I'm Mvoud, a 17-year-old who thinks big, with creativity constantly sparking new ideas an inventive engineer, to put it simply.</p>
-    <p>To show that I'm real, this dream has become my life goal and an opportunity to become an entrepreneur.</p>
+<body class="font-sans selection:bg-app-accent selection:text-white">
 
-    <hr>
-    <p>First of all, we noticed that other domains have been created with the same name as ours, apparently containing AI-generated content, which we don’t want.</p>
-    <p>Companies are often created out of passion, not as a generated solution to steal other people’s dreams for profit or jealousy.</p> 
-    <p>I will list the domains that are trying to do this, not to be offensive, but to reveal the real side of these people: </p>
-<table border="1">
-    <tr>
-        <th>Site</th>
-        <th>Purpose</th>
-        <th>To Trust?</th>
-    </tr>
-    <tr>
-        <td><a href="https://aizenstudios.com/">aizenstudios.com</a></td>
-        <td>Seems to be a fake video-generation AI company selling suspicious lessons. The design is uncurated. They have a YouTube channel, but don’t visit it.</td>
-        <td>No</td>
-    </tr>
-    <tr>
-        <td><a href="https://www.roblox.com/it/communities/10496332/Alzen-Studios">Roblox: Alzen-Studios</a></td>
-        <td>They try to copy us. We don’t use Roblox at all.</td>
-        <td>No</td>
-    </tr>
-</table>
-
-    <h3>What do I like to do?</h3>
-    <p>I genuinely love programming in C# and other languages, and I also produce music.</p>
-    <p>PS: I love OOP structures and static/dynamic classes basically, complex architectures.</p>
-    <hr>
-    <h3>Why does my site have a minimalistic style?</h3>
-    <p>Because sophisticated sites are often blamed for AI-generated content in this era.</p>
-    <br>
-    <h3>What is the purpuse of this site?</h3>
-    <p>Our goal is to explore new ideas in software and hardware, sharing updates and insights from our journey <b>without claiming anything risky or controversial</b>.</p>
-    <br>
-    <h3>What are the goals so far?</h3>
-    <p>We are creating EngineSDK, our special software platform that will develop with us to build a dynamically based ecosystem.</p>
-    <p>We will also publish the first game releases soon, so stay tuned for more information...</p>
-    <br>
-    <h3>No copyright claim?</h3>
-    <p>Ah yes, let's talk about that. One year from now, I turn 18, and from there I will claim the copyright for my company.</p>
-    <p>Obviously, for now I don’t have it, so if you’re kind enough, please avoid making false claims or trash-talking about the company.</p>
-    <br>
-    <h3>Documentation Portal</h3>
-<p>my documentation portal that describes all of your projects intuitivly and strucutred proprialy (there with style)</p>
-
-</body>
-</html>
-<style>
-    body { font-family: Arial, sans-serif; line-height: 1.2; margin: 20px; }
-    h1, h3 { color: #222; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background-color: #f4f4f4; }
+    <style>
+    @keyframes pulseGlow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.05); }
+    }
+    .header-glow {
+        background: radial-gradient(circle at bottom, rgba(129, 140, 248, 0.15) 0%, transparent 70%);
+        animation: pulseGlow 4s ease-in-out infinite;
+    }
+    /* Adding blue accent borders */
+    .header-border-glow {
+        box-shadow: inset 0 -20px 50px -20px rgba(59, 130, 246, 0.2), 
+                    inset 20px 0 50px -30px rgba(59, 130, 246, 0.1), 
+                    inset -20px 0 50px -30px rgba(59, 130, 246, 0.1);
+    }
 
 </style>
+
+<header class="relative h-[70vh] flex items-center justify-center text-center px-6 overflow-hidden border-b border-app-border header-border-glow">
+    
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+    
+    <div class="absolute inset-0 header-glow"></div>
+
+    <div class="relative z-10">
+        <h1 class="text-7xl md:text-8xl font-black tracking-tighter uppercase italic drop-shadow-[0_0_15px_rgba(129,140,248,0.3)]">
+            ALZEN <span class="text-app-accent">STUDIOS</span>
+        </h1>
+        <p class="mt-6 text-app-muted text-lg tracking-[0.4em] uppercase font-light">
+            Next-Gen Engine Architecture & Game Development
+        </p>
+        
+        <div class="mt-8 w-24 h-1 bg-gradient-to-r from-transparent via-app-accent to-transparent mx-auto opacity-50 animate-pulse"></div>
+    </div>
+</header>
+
+    <div class="ml-10 border-l-2 border-app-accent/20">
+        <section class="py-24 px-10 relative">
+            <div class="max-w-4xl">
+                <h2 class="text-sm font-bold text-app-accent uppercase tracking-[0.3em] mb-4">The Founder</h2>
+                <h3 class="text-5xl font-black uppercase italic tracking-tighter mb-8">
+                    Francesco <span class="text-app-accent">Zecchini</span>
+                </h3>
+                <div class="space-y-6 text-app-muted text-lg leading-relaxed">
+                    <p>I have reached a turning point. At <span class="text-app-text font-bold text-white">18 years old</span>, the era of preparation has ended. My journey has led me here: to the intersection of raw performance and digital art.</p>
+                    <p>As the mind behind <span class="text-app-text font-bold uppercase italic text-white">Alzen Studios</span>, I am building my future. By mastering low-level technologies like <span class="text-app-text font-mono bg-app-card px-2">Vulkan</span> and <span class="text-app-text font-mono bg-app-card px-2">Silk.NET</span>, I choose technical independence.</p>
+                    <blockquote class="border-l-4 border-app-accent pl-6 py-2 my-10 italic bg-app-accent/10 rounded-r-lg text-left">
+                        "The future isn't something that happens to me; it is something I compile, line by line."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-10 relative">
+            <div class="absolute top-28 left-0 w-10 h-0.5 bg-app-accent/30"></div>
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="flex-shrink-0 relative z-10">
+                    <div class="w-16 h-16 bg-app-bg border-2 border-app-accent rounded-xl flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(129,140,248,0.3)]">
+                        <span class="text-app-accent">⚙️</span>
+                    </div>
+                </div>
+                <div class="max-w-3xl">
+                    <h2 class="text-4xl font-black uppercase italic mb-6 tracking-tighter">
+                        Engineered for <span class="text-app-accent">Innovation</span>
+                    </h2>
+                    <p class="text-app-muted leading-relaxed text-lg">
+                        We believe the next frontier isn't just in game design, but in the code that powers it. Bypassing restrictive engines for <span class="text-app-text font-mono bg-app-card px-2 text-white border border-app-border">Vulkan</span> allows absolute control over the hardware-to-software interface.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="py-32 max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-sm font-bold text-app-accent uppercase tracking-[0.3em] mb-12">Core Stack</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="card-display-btn bg-app-card p-8 border border-app-border rounded-xl flex flex-col items-center group hover:border-app-accent transition">
+                <span class="text-4xl mb-4 group-hover:scale-110 transition">🌋</span>
+                <h3 class="font-bold">Vulkan</h3>
+            </div>
+            <div class="card-display-btn bg-app-card p-8 border border-app-border rounded-xl flex flex-col items-center group hover:border-app-accent transition">
+                <span class="text-4xl mb-4 group-hover:scale-110 transition">🕸️</span>
+                <h3 class="font-bold">Silk.NET</h3>
+            </div>
+            <div class="card-display-btn bg-app-card p-8 border border-app-border rounded-xl flex flex-col items-center group hover:border-app-accent transition">
+                <span class="text-4xl mb-4 group-hover:scale-110 transition">🔊</span>
+                <h3 class="font-bold">OpenAL</h3>
+            </div>
+            <div class="card-display-btn bg-app-card p-8 border border-app-border rounded-xl flex flex-col items-center group hover:border-app-accent transition">
+                <span class="text-4xl mb-4 group-hover:scale-110 transition">🛠️</span>
+                <h3 class="font-bold">C# / .NET</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 max-w-7xl mx-auto px-6 border-t border-app-border text-center">
+        <div class="mb-16">
+            <h2 class="text-4xl font-black uppercase italic tracking-tighter">Target Platforms</h2>
+            <p class="text-app-muted mt-4 max-w-xl mx-auto">Focused on high-bandwidth environments and native performance.</p>
+        </div> 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card-display-btn bg-app-card border border-app-border rounded-2xl p-8 flex flex-col items-center group hover:border-app-accent transition duration-300">
+                <div class="text-4xl mb-6">💻</div>
+                <h3 class="text-xl font-bold uppercase tracking-widest">Desktop PC</h3>
+                <p class="text-app-muted mt-4 text-sm leading-relaxed">Vulkan 1.3 High-Performance profiles for Windows & Linux.</p>
+            </div>
+            <div class="card-display-btn bg-app-card border border-app-border rounded-2xl p-8 flex flex-col items-center group hover:border-app-accent transition duration-300">
+                <div class="text-4xl mb-6">🎮</div>
+                <h3 class="text-xl font-bold uppercase tracking-widest">Consoles</h3>
+                <p class="text-app-muted mt-4 text-sm leading-relaxed">Next-Gen Stationary systems utilizing unified memory.</p>
+            </div>
+            <div class="card-display-btn bg-app-card border border-app-border rounded-2xl p-8 flex flex-col items-center group hover:border-app-accent transition duration-300">
+                <div class="text-4xl mb-6">🕹️</div>
+                <h3 class="text-xl font-bold uppercase tracking-widest">Handheld</h3>
+                <p class="text-app-muted mt-4 text-sm leading-relaxed">Pro Hardware Compatibility for high-end portable devices.</p>
+            </div>
+        </div>
+        <div class="mt-16">
+            <p class="text-[11px] font-bold text-red-500 uppercase tracking-[0.2em] bg-red-500/10 border border-red-500/20 px-6 py-3 rounded-full inline-block">
+                Mobile devices are not supported to preserve technical integrity.
+            </p>
+        </div>
+    </section>
+
+
+
+    <footer class="py-20 border-t border-app-border text-center">
+        <div class="flex justify-center gap-10 mb-8 text-xs uppercase tracking-[0.2em]">
+            <a href="#" class="hover:text-app-accent transition">GitHub</a>
+            <a href="#" class="hover:text-app-accent transition">Youtube</a>
+            <a href="#" class="hover:text-app-accent transition">Instagram</a>
+        </div>
+        <p class="text-app-muted text-[10px] uppercase tracking-[0.4em]">© 2025 Alzenstudios | Francesco Zecchini</p>
+    </footer>
+</body>
+</html>
+<script>
+    let audioCtx;
+    let hoverBuffer, ambientBuffer;
+    let isInitialized = false;
+
+    // 1. Caricamento dei file tramite Fetch
+    async function loadAudioFiles() {
+        try {
+            const [hoverRes, ambientRes] = await Promise.all([
+                fetch('../assets/sounds/button.hover.mp3'),
+                fetch('../assets/sounds/ambient.mp3')
+            ]);
+
+            const [hoverData, ambientData] = await Promise.all([
+                hoverRes.arrayBuffer(),
+                ambientRes.arrayBuffer()
+            ]);
+
+            hoverBuffer = await audioCtx.decodeAudioData(hoverData);
+            ambientBuffer = await audioCtx.decodeAudioData(ambientData);
+            
+            console.log("Assets Audio Caricati.");
+            startAmbientLoop(); 
+        } catch (e) {
+            console.error("Errore nel caricamento file: controlla i percorsi Assets", e);
+        }
+    }
+
+    // 2. Avvio dell'Ambiente in Loop (JS purissimo)
+    function startAmbientLoop() {
+        if (!ambientBuffer) return;
+
+        const source = audioCtx.createBufferSource();
+        source.buffer = ambientBuffer;
+        source.loop = true;
+
+        const gainNode = audioCtx.createGain();
+        // Fade-in: da 0 a 0.15 in 4 secondi
+        gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 4);
+
+        source.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        source.start(0);
+    }
+
+    // 3. Suono Hover per le Card (Happy Pitches)
+    function playHoverSound() {
+        if (!isInitialized || !hoverBuffer) return;
+
+        const source = audioCtx.createBufferSource();
+        source.buffer = hoverBuffer;
+
+        const happyPitches = [1.0, 1.125, 1.25, 1.33, 1.5];
+        source.playbackRate.value = happyPitches[Math.floor(Math.random() * happyPitches.length)];
+
+        const gainNode = audioCtx.createGain();
+        gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+
+        source.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        source.start(0);
+    }
+
+    // 4. Inizializzazione Globale
+    async function startEngine() {
+        if (isInitialized) return;
+
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') await audioCtx.resume();
+
+        await loadAudioFiles();
+
+        // Collega i suoni alle card
+        document.querySelectorAll('.card-display-btn').forEach(card => {
+            card.addEventListener('mouseenter', playHoverSound);
+        });
+
+        isInitialized = true;
+        
+        // Rimuove i trigger di attivazione
+        ['click', 'mousedown', 'keydown', 'touchstart'].forEach(e => {
+            window.removeEventListener(e, startEngine);
+        });
+    }
+
+    // Trigger per sbloccare l'audio (obbligatorio per i browser)
+    ['click', 'mousedown', 'keydown', 'touchstart'].forEach(e => {
+        window.addEventListener(e, startEngine);
+    });
+</script>
+<script>
+    let airCtx, airNode, airFilter, airGain;
+    let airInitialized = false;
+
+    function initAirEngine() {
+        if (airInitialized) return;
+
+        airCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        const bufferSize = airCtx.sampleRate * 2;
+        const buffer = airCtx.createBuffer(1, bufferSize, airCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+            data[i] = Math.random() * 2 - 1;
+        }
+
+        airNode = airCtx.createBufferSource();
+        airNode.buffer = buffer;
+        airNode.loop = true;
+
+        airFilter = airCtx.createBiquadFilter();
+        airFilter.type = 'lowpass';
+        airFilter.frequency.setValueAtTime(150, airCtx.currentTime); 
+        airFilter.Q.setValueAtTime(0.5, airCtx.currentTime); // Ridotta la risonanza per un suono più pulito
+
+        airGain = airCtx.createGain();
+        airGain.gain.setValueAtTime(0, airCtx.currentTime); 
+
+        airNode.connect(airFilter);
+        airFilter.connect(airGain);
+        airGain.connect(airCtx.destination);
+
+        airNode.start();
+        airInitialized = true;
+        console.log("Air Engine: Volume Optimized");
+    }
+
+    let airTimeout;
+    window.addEventListener('wheel', (e) => {
+        if (!airInitialized) initAirEngine();
+        if (airCtx.state === 'suspended') airCtx.resume();
+
+        const speed = Math.abs(e.deltaY);
+
+        if (speed > 5) {
+            // VOLUME RIDOTTO: Portato a un massimo di 0.08 (circa 5 volte meno di prima)
+            const targetVol = Math.min(speed / 1200, 0.08); 
+            // FREQUENZA DOLCE: Sale meno drasticamente per evitare il fischio acuto
+            const targetFreq = Math.min(150 + (speed * 4), 3500); 
+
+            airGain.gain.setTargetAtTime(targetVol, airCtx.currentTime, 0.08);
+            airFilter.frequency.setTargetAtTime(targetFreq, airCtx.currentTime, 0.08);
+
+            clearTimeout(airTimeout);
+            airTimeout = setTimeout(() => {
+                airGain.gain.setTargetAtTime(0, airCtx.currentTime, 0.4); 
+                airFilter.frequency.setTargetAtTime(150, airCtx.currentTime, 0.6);
+            }, 40);
+        }
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            if (!airInitialized) initAirEngine();
+            
+            // Volume bassissimo (0.03) e frequenza cupa (800Hz max)
+            const slowVol = 0.01; 
+            const slowFreq = 300; 
+
+            airGain.gain.setTargetAtTime(slowVol, airCtx.currentTime, 0.15);
+            airFilter.frequency.setTargetAtTime(slowFreq, airCtx.currentTime, 0.15);
+
+            clearTimeout(airTimeout);
+            airTimeout = setTimeout(() => {
+                airGain.gain.setTargetAtTime(0, airCtx.currentTime, 0.5);
+                airFilter.frequency.setTargetAtTime(150, airCtx.currentTime, 0.8);
+            }, 150);
+        }
+    });
+
+    ['mousedown', 'keydown', 'touchstart'].forEach(event => {
+        window.addEventListener(event, () => {
+            if (!airInitialized) initAirEngine();
+            if (airCtx && airCtx.state === 'suspended') airCtx.resume();
+        }, { once: true });
+    });
+
+    
+</script>
+
+<script>
+    // 1. Disabilita il Menu Contestuale (Tasto Destro)
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    }, false);
+
+    // 2. Blocca F12 e le combinazioni da Developer (Ctrl+Shift+I, Ctrl+U, etc.)
+    document.addEventListener('keydown', (e) => {
+        // Disabilita F12
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+
+        // Disabilita Ctrl+Shift+I (Inspect) e Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
+            e.preventDefault();
+            return false;
+        }
+
+        // Disabilita Ctrl+U (View Source)
+        if (e.ctrlKey && e.key === 'u') {
+            e.preventDefault();
+            return false;
+        }
+
+        // Disabilita Ctrl+S (Save Page) per evitare il download degli asset
+        if (e.ctrlKey && e.key === 's') {
+            e.preventDefault();
+            return false;
+        }
+    }, false);
+    
+    console.log("System Security: F12 and Context Menu Disabled.");
+</script>
